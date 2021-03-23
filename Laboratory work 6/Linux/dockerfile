@@ -1,0 +1,5 @@
+FROM ubuntu
+RUN apt update && apt-get install build-essential -y && apt-get install gcc-multilib -y
+COPY lab6.cpp .
+RUN g++ lab6.cpp -lpthread -o lab6
+CMD ./lab6
